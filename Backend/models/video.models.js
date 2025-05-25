@@ -13,13 +13,11 @@ const videoSchema = mongoose.Schema({
     },
     websitelink: {
         type: String,
-        trim: true,
-        required: true,
+        trim: true
     },
     githublink: {
         type: String,
-        trim: true,
-        required: true,
+        trim: true
     }
 });
 
