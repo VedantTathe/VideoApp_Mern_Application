@@ -144,10 +144,10 @@ export default function Home() {
             {videoLinks.videos.map((video) => (
               <li key={video._id} className="bg-gray-800 p-4 rounded-lg shadow-md flex justify-between items-center text-white">
                 <div>
-                  <p className="text-lg font-medium text-gray-100">{video.videoname}</p>
-                  <p className="text-sm text-gray-400">{video.videolink}</p>
-                  <p className="text-sm text-gray-400">{video.websitelink}</p>
-                  <p className="text-sm text-gray-400">{video.githublink}</p>
+                  <p className="text-lg font-medium text-gray-100 text-wrap break-all">{video.videoname}</p>
+                  <p className="truncate w-[100px] md:w-[300px] text-sm text-gray-400">{video.videolink}</p>
+                  <p className="truncate w-[100px] md:w-[300px] text-sm text-gray-400">{video.websitelink}</p>
+                  <p className="truncate w-[100px] md:w-[300px] text-sm text-gray-400">{video.githublink}</p>
                 </div>
                 <div className="flex space-x-2">
                   <button className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition" onClick={() => handleView(video._id)}>
