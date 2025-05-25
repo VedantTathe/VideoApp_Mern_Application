@@ -14,7 +14,7 @@ export default function Register() {
     setSuccess("");
 
     try {
-      const response = await axios.post("https://videoappbyvedant.vercel.app/users/register", {
+      const response = await axios.post("https://video-app-mern-application.vercel.app/users/register", {
         username,
         email,
         password,

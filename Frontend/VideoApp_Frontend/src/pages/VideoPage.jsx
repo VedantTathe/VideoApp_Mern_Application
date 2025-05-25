@@ -13,7 +13,7 @@ function VideoPage() {
     const fetchVideoUrl = async () => {
       // try {
       // const response = await axios.get(`https://videoapp-production-e517.up.railway.app/api/videos/${videoid}`);
-      const response = await axios.get(`https://videoappbyvedant.vercel.app/videos/${videoid}`);
+      const response = await axios.get(`https://video-app-mern-application.vercel.app/videos/${videoid}`);
       console.log(response.data.videos.videolink);
       setVideoUrl(convertToEmbedUrl(response.data.videos.videolink));
       console.log(videoUrl);

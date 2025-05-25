@@ -24,7 +24,7 @@ export default function Home() {
       try {
 
         // const response = await axios.get("https://videoapp-production-e517.up.railway.app/api/videos");
-        const response = await axios.get("https://videoappbyvedant.vercel.app/videos");
+        const response = await axios.get("https://video-app-mern-application.vercel.app/videos");
         setVideoLinks(response.data);
       } catch (error) {
         console.error("Error fetching videos:", error);
@@ -48,11 +48,11 @@ export default function Home() {
       if (editingVideo) {
         videoData._id = editingVideo._id; 
         // await axios.post("https://videoapp-production-e517.up.railway.app/api/videos", videoData);
-        await axios.post("https://videoappbyvedant.vercel.app/videos/update", videoData);
+        await axios.post("https://video-app-mern-application.vercel.app/videos/update", videoData);
         setEditingVideo(null);
       } else {
         // await axios.post("https://videoapp-production-e517.up.railway.app/api/videos", videoData);
-        await axios.post("https://videoappbyvedant.vercel.app/videos/create", videoData);
+        await axios.post("https://video-app-mern-application.vercel.app/videos/create", videoData);
       }
 
       setVideoName("");
@@ -69,7 +69,7 @@ export default function Home() {
   const handleDelete = async (id) => {
     try {
       // await axios.delete(`https://videoapp-production-e517.up.railway.app/api/videos/${id}`);
-      await axios.delete(`https://videoappbyvedant.vercel.app/videos/delete/${id}`);
+      await axios.delete(`https://video-app-mern-application.vercel.app/videos/delete/${id}`);
       setVideoLinks(videoLinks.videos.filter((video) => video._id !== id));
     } catch (error) {
       console.error("Error deleting video:", error);

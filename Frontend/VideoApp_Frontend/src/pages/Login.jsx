@@ -18,7 +18,7 @@ export default function Login() {
 
     try {
       // const response = await axios.post("https://videoapp-production-e517.up.railway.app/api/users/auth/login", {
-      const response = await axios.post("https://videoappbyvedant.vercel.app/users/login", {
+      const response = await axios.post("https://video-app-mern-application.vercel.app/users/login", {
         email,
         password,
       });
